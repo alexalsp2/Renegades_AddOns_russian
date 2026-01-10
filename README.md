@@ -23,7 +23,7 @@
 # Домашняя страница - Тема
 * https://apocalypse.moy.su/forum/341-2071-1
 
-# **Поддержка**
+# **Поддержка - перевод**
 
 * Boosty - https://boosty.to/alexalsp/donate
 * Webmoney - https://funding.webmoney.ru/stati-novosti-programmy-mody
