@@ -1,0 +1,1058 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.Favor.GetInfo</name>
+	<version>4</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="favorName" type="Var/String" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="" />
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'assistance'</text>
+		</line>
+		<line linenr="005" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Боевые группы будут оказывать поддержку вашим кораблям при захвате вражеского сектора.'</text>
+		</line>
+		<line linenr="006" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'protection'</text>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Флоты защиты и пограничного патруля постараются защитить ваши сектора в случае атаки.'</text>
+		</line>
+		<line linenr="008" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'priority'</text>
+		</line>
+		<line linenr="009" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Выберите один приоритетный сектор для Боевых Групп.'</text>
+		</line>
+		<line linenr="010" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'restriction'</text>
+		</line>
+		<line linenr="011" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Выберите один сектор, который будет игнорироваться боевыми группами. Будет отменено, если уже есть.'</text>
+		</line>
+		<line linenr="012" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'insight'</text>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Откройте несколько неизвестных вам случайных секторов. Не медлите.'</text>
+		</line>
+		<line linenr="014" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'partnership'</text>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Торговцы в пределах досягаемости будут отдавать предпочтение вашим станциям.'</text>
+		</line>
+		<line linenr="016" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'mapping'</text>
+		</line>
+		<line linenr="017" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Исследователи для вас будут размещать улучшенные спутники.'</text>
+		</line>
+		<line linenr="018" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'truce'</text>
+		</line>
+		<line linenr="019" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Эта фракция заключит мир с выбранной фракцией и при необходимости выйдет из договора. Срок дейстия - это время перемирия.'</text>
+		</line>
+		<line linenr="020" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'pacifism'</text>
+		</line>
+		<line linenr="021" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Эта фракция не будет претендовать на какой-либо сектор и при необходимости отступит.'</text>
+		</line>
+		<line linenr="022" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'fairness'</text>
+		</line>
+		<line linenr="023" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Боевые группы будут покидать сектора, а не захватывать их.'</text>
+		</line>
+		<line linenr="024" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'chaos'</text>
+		</line>
+		<line linenr="025" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Эта фракция объявит Постоянную Войну выбранной фракции Содружества.'</text>
+		</line>
+		<line linenr="026" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'federation'</text>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Эта фракция заключит Постоянный Союз с выбранной фракцией Содружества.'</text>
+		</line>
+		<line linenr="028" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'vote'</text>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Они поддержат вас в голосовании по вопросу галактического объединения против империи Ксенонов.'</text>
+		</line>
+		<line linenr="030" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'spaceweed'</text>
+		</line>
+		<line linenr="031" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Треть их заводов закупает Космотабак, что единоразово принесет вам 10 очков дурной славы.'</text>
+		</line>
+		<line linenr="032" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$favorName</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'research'</text>
+		</line>
+		<line linenr="033" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'При исследовании собственных кораблей они получат +20 прогресса за цикл на всех исследовательских станциях.'</text>
+		</line>
+		<line linenr="034" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="035" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="036" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="037" indent="" />
+		<line linenr="038" indent="">
+			<comment>* Add-Ons 1.4.2: Now displays fractional time.</comment>
+		</line>
+		<line linenr="039" indent="" interruptable="@">
+			<var>$duration</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Favor.GetTimeout</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>favorName</text>
+			<text>=</text>
+			<var>$favorName</var>
+		</line>
+		<line linenr="040" indent="">
+			<var>$duration.hours</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$duration</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>3600</var>
+		</line>
+		<line linenr="041" indent="">
+			<var>$duration.fractionalHours</var>
+			<text> </text>
+			<text>=</text>
+			<text>  </text>
+			<text>(</text>
+			<var>$duration</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>$duration.hours</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>3600</var>
+			<text>)</text>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>360</var>
+		</line>
+		<line linenr="042" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$duration</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="043" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$info</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>' Срок: постоянно.'</text>
+		</line>
+		<line linenr="044" indent="&#160;">
+			<comment>*else if $duration == 1</comment>
+		</line>
+		<line linenr="045" indent="&#160;">
+			<comment>*$info = $info + ' Duration: ' + $duration + ' hour.'</comment>
+		</line>
+		<line linenr="046" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="047" indent="&#160;">
+			<var>$info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$info</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>' Срок действия: '</text>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$duration.hours</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>'.'</text>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$duration.fractionalHours</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>' ч.'</text>
+		</line>
+		<line linenr="048" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="049" indent="" />
+		<line linenr="050" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>$info</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.Favor.GetInfo" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="4" />
+			<sval type="int" val="0" />
+			<sval type="array" size="5">
+				<sval type="string" val="favorName" />
+				<sval type="string" val="info" />
+				<sval type="string" val="duration" />
+				<sval type="string" val="duration.hours" />
+				<sval type="string" val="duration.fractionalHours" />
+			</sval>
+			<sval type="array" size="54">
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610611965" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="assistance" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Боевые группы будут оказывать поддержку вашим кораблям при захвате вражеского сектора." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610611195" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="protection" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Флоты защиты и пограничного патруля постараются защитить ваши сектора в случае атаки." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610610427" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="priority" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Выберите один приоритетный сектор для Боевых Групп." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609659" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="restriction" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Выберите один сектор, который будет игнорироваться боевыми группами. Будет отменено, если уже есть." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608891" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="insight" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Откройте несколько неизвестных вам случайных секторов. Не медлите." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608123" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="partnership" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Торговцы в пределах досягаемости будут отдавать предпочтение вашим станциям." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607355" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mapping" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Исследователи для вас будут размещать улучшенные спутники." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610606587" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="truce" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Эта фракция заключит мир с выбранной фракцией и при необходимости выйдет из договора. Срок дейстия - это время перемирия." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610605819" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="pacifism" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Эта фракция не будет претендовать на какой-либо сектор и при необходимости отступит." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610605051" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="fairness" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Боевые группы будут покидать сектора, а не захватывать их." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604283" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="chaos" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Эта фракция объявит Постоянную Войну выбранной фракции Содружества." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610603515" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="federation" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Эта фракция заключит Постоянный Союз с выбранной фракцией Содружества." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610602747" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="vote" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Они поддержат вас в голосовании по вопросу галактического объединения против империи Ксенонов." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610601979" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="spaceweed" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Треть их заводов закупает Космотабак, что единоразово принесет вам 10 очков дурной славы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610601211" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="research" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="При исследовании собственных кораблей они получат +20 прогресса за цикл на всех исследовательских станциях." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Favor.GetTimeout" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3600" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="27">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3600" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="4" />
+					<sval type="int" val="360" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="9" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-3" />
+					<sval type="int" val="17" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-6" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599421" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val=" Срок: постоянно." />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="53" />
+				</sval>
+				<sval type="array" size="37">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val=" Срок действия: " />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="string" val="." />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="string" val=" ч." />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-4" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-6" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-8" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-10" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="12">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="45" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="46" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="46" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="46" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.4.2: Now displays fractional time." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="else if $duration == 1" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$info = $info + ' Duration: ' + $duration + ' hour.'" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="52" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="53" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="53" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

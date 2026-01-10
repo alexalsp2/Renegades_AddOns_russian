@@ -1,0 +1,316 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.GetEventDescription</name>
+	<version>2</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="event" type="Var/String" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Смертельная болезнь'</text>
+		</line>
+		<line linenr="003" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Смертельная болезнь: население умирает. Поможет только время.'</text>
+		</line>
+		<line linenr="004" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Ошибка ядра'</text>
+		</line>
+		<line linenr="005" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Ошибка ядра: расходы на обслуживание старых и новых кораблей построенных на этом Фрпосте увеличелось вдвое.'</text>
+		</line>
+		<line linenr="006" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Серьезная неполадка'</text>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Серьезная неполадка: производственный прогресс снизился вдвое. Эффект суммируется с модификаторами скорости терраформирования.'</text>
+		</line>
+		<line linenr="008" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Пожар в хранилище'</text>
+		</line>
+		<line linenr="009" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Пожар в хранилище: рандомная потеря ресурсов.'</text>
+		</line>
+		<line linenr="010" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Вирус Терраформера'</text>
+		</line>
+		<line linenr="011" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Вирус Терраформера: будущие корабли, построенные на этом форпосте, будут заражены компьютерным вирусом.'</text>
+		</line>
+		<line linenr="012" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Неверное имя события! Пожалуйста, сообщите об этой ошибке на форуме.'</text>
+		</line>
+		<line linenr="014" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="015" indent="" />
+		<line linenr="016" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>$t</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.GetEventDescription" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="2" />
+			<sval type="int" val="0" />
+			<sval type="array" size="2">
+				<sval type="string" val="event" />
+				<sval type="string" val="t" />
+			</sval>
+			<sval type="array" size="17">
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610611965" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Смертельная болезнь" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Смертельная болезнь: население умирает. Поможет только время." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610611195" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Ошибка ядра" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Ошибка ядра: расходы на обслуживание старых и новых кораблей построенных на этом Фрпосте увеличелось вдвое." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610610427" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Серьезная неполадка" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Серьезная неполадка: производственный прогресс снизился вдвое. Эффект суммируется с модификаторами скорости терраформирования." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609659" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Пожар в хранилище" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Пожар в хранилище: рандомная потеря ресурсов." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608891" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Вирус Терраформера" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Вирус Терраформера: будущие корабли, построенные на этом форпосте, будут заражены компьютерным вирусом." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Неверное имя события! Пожалуйста, сообщите об этой ошибке на форуме." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="4">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="15" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

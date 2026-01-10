@@ -1,0 +1,3602 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>ShowNewsTips</name>
+	<version>98</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="tipnumber" type="Number" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="">
+			<comment>* Normally this is pulled from one of the t-files, but I don't care about translation, so hard-coding it here.  </comment>
+		</line>
+		<line linenr="003" indent="">
+			<comment>* deal with it.</comment>
+		</line>
+		<line linenr="004" indent="" />
+		<line linenr="005" indent="">
+			<comment>* Possible Topics:</comment>
+		</line>
+		<line linenr="006" indent="">
+			<comment>* ---------------------</comment>
+		</line>
+		<line linenr="007" indent="">
+			<comment>* Pirates</comment>
+		</line>
+		<line linenr="008" indent="">
+			<comment>* Terraforming</comment>
+		</line>
+		<line linenr="009" indent="">
+			<comment>* Infamy</comment>
+		</line>
+		<line linenr="010" indent="">
+			<comment>* Phanon</comment>
+		</line>
+		<line linenr="011" indent="">
+			<comment>* OCV</comment>
+		</line>
+		<line linenr="012" indent="">
+			<comment>* Cyber Center</comment>
+		</line>
+		<line linenr="013" indent="" />
+		<line linenr="014" indent="">
+			<var>$tnumber</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$tipnumber</var>
+		</line>
+		<line linenr="015" indent="">
+			<var>$msg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>''</text>
+		</line>
+		<line linenr="016" indent="" />
+		<line linenr="017" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="018" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по обслуживанию. Экономия кредитов! --'</text>
+		</line>
+		<line linenr="019" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Избегайте установки лишних прыжковых маяков. На высоких уровнях сложности их обслуживание обходится очень дорого.'</text>
+		</line>
+		<line linenr="020" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="021" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Перк &quot;Сухой док&quot; снижает расходы на содержание пристыкованных капиталдьных кораблей на 75%, а малых кораблей - на 25%.'</text>
+		</line>
+		<line linenr="022" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="023" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Качество корабля напрямую влияет на стоимость обслуживания. Для кораблей самого низкого качества она может вырасти почти вдвое!'</text>
+		</line>
+		<line linenr="024" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="025" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Содержание улучшенных кораблей на 35% дороже'</text>
+		</line>
+		<line linenr="026" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли, которые вы строите не своей расы, требуют больше затрат на обслуживание.'</text>
+		</line>
+		<line linenr="028" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Для кораблей, построенных на форпостах с перком &quot;Передовые технологии&quot;, стоимость обслуживания будет снижена на 50%.'</text>
+		</line>
+		<line linenr="030" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="031" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Обслуживание кораблей Яки на 25% меньше, пока у вас есть дурная слава'.</text>
+		</line>
+		<line linenr="032" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="033" indent="&#160;" />
+		<line linenr="034" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="035" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по автоматическому исследованию. --'</text>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Постройте собственную станцию по производству улучшенных спутников и припишите к ней быстрые истребители класса M5. После этого вы сможете назначить их авто исследователями. Это также работает и с форпостами.'</text>
+		</line>
+		<line linenr="037" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Автоматические исследователи действуют в радиусе 15 прыжков от своей базы.'</text>
+		</line>
+		<line linenr="039" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="040" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследователи, базирующиеся на одной станции, всегда исследуют разные секторы без дублирования зон.'</text>
+		</line>
+		<line linenr="041" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="042" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Полезно знать: разведчики ИИ на более высоких уровнях сложности могут захватывать сектора.'</text>
+		</line>
+		<line linenr="043" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="044" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследователи будут избегать секторов из черного списка. Возможно, вам придётся изучить их лично.'</text>
+		</line>
+		<line linenr="045" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="046" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* На высоких уровнях сложности другие державы будут периодически &quot;зачищать&quot; часть ваших спутников, поэтому ваши автоматизированные разведчики будут постоянно заняты их заменой.'</text>
+		</line>
+		<line linenr="047" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="048" indent="&#160;" />
+		<line linenr="049" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>3</var>
+		</line>
+		<line linenr="050" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Разные советы. --'</text>
+		</line>
+		<line linenr="051" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Капитальные (крупные) корабли плохо справляются со стыковкой и проходом через врата, когда вы находитесь с ними в одном секторе. Они часто создают заторы из-за системы избегания столкновений, которая активна только когда вы присутствуете в секторе. Если вы хотите, чтобы они перемещались без пробок, находитесь в другом секторе. Для перемещений внутри сектора при вашем присутствии они работают нормально.'</text>
+		</line>
+		<line linenr="052" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="053" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы находитесь в системе вместе со своим флотом, весь урон (с обеих сторон) значительно увеличивается. Так что если вы хотите быстро закончить бой — будьте в секторе сражения. Вне системы весь урон снижен примерно до одной трети.'</text>
+		</line>
+		<line linenr="054" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="055" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вне сектора (OOS) Чафы не используются в боях, так как такие бои рассчитываются по упрощённой системе, где не все факторы учитываются. Если вы не участвуете в боях лично, не тратьтесь деньги на них.'</text>
+		</line>
+		<line linenr="056" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="057" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Модернизируйте большие корабли в ангаре форпоста, используя цветные кристаллы.  В частности, CCDS1/2/3 позволят использовать Чафф для отражения 3 типов ракет в игре.'</text>
+		</line>
+		<line linenr="058" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="059" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Перк "Прыжковая станция" ограничен четырьмя станциями на всю галактику, поэтому размещайте их в стратегически важных точках, где возможны атаки и нельзя полагаться на хрупкие прыжковые маяки. Потеря маяка во время реагирования на нападение может обернуться катастрофой.'</text>
+		</line>
+		<line linenr="060" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="061" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Помните, что на высоком и безумном уровнях сложности вы не можете устанавливать маяки в секторах, которые вам не принадлежат. Это значительно усложняет экспансию и зеркалит ограничения ИИ. Единственный способ расширить влияние - использовать TL или капитальный корабль, для перевозки и размещения фабрики или форпоста в нужном месте, и только после этого вы сможете разместить там маяк.'</text>
+		</line>
+		<line linenr="062" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="063" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* ИИ иногда отправляет небольшие рейдовые отряды вглубь вашей территории во время войны. Это маленькие флоты быстрых истребителей, которые уничтожают ваших агентов на аванпостах и торговцев, так что защищайте тылы.'</text>
+		</line>
+		<line linenr="064" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="065" indent="&#160;" />
+		<line linenr="066" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>4</var>
+		</line>
+		<line linenr="067" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по исследованиям. --'</text>
+		</line>
+		<line linenr="068" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Перк &quot;Ускорение исследования&quot; может значительно ускорить любые исследования в этом секторе.'</text>
+		</line>
+		<line linenr="069" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="070" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей своей расы даёт значительный бонус.'</text>
+		</line>
+		<line linenr="071" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="072" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей типа, соответствующего нациям, граничащим с этим сектором, даёт вам бонус.'</text>
+		</line>
+		<line linenr="073" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="074" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Услуга по исследованиям от другой расы может временно ускорить ваши исследования.'</text>
+		</line>
+		<line linenr="075" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="076" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы состоите в Коалиции, это может ускорить скорость ваших исследований.'</text>
+		</line>
+		<line linenr="077" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="078" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей OCV проходит быстрее в системах с более высоким уровнем сигнала OCV.'</text>
+		</line>
+		<line linenr="079" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="080" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей Яки улучшено, если у вас есть Дурная слава.'</text>
+		</line>
+		<line linenr="081" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="082" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли землян можно исследовать только в системах, где есть сектора с "Технологиями землян".'</text>
+		</line>
+		<line linenr="083" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="084" indent="&#160;">
+			<comment>* Add-Ons 1.2: new tip</comment>
+		</line>
+		<line linenr="085" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вы можете использовать свой сканер данных для сканирования собственных кораблей, на которые у вас нет чертежа.'</text>
+		</line>
+		<line linenr="086" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="087" indent="&#160;" />
+		<line linenr="088" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="089" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по сражению флотов. --'</text>
+		</line>
+		<line linenr="090" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы не можете догнать кого-то, вы не можете его убить. Скорость убивает. У Сплитов самые быстрые корабли, но их защита довольно слабая. При правильном использовании они могут быть смертоносны. У каждой расы есть свои особые преимущества, которые нужно изучить и использовать.'</text>
+		</line>
+		<line linenr="091" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="092" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Прикрывайте свои большие капитальные корабли с помощью нескольких M6. Они обеспечивают отличную защиту от истребителей и могут выстоять в серьёзном бою.'</text>
+		</line>
+		<line linenr="093" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="094" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Создавайте быстрые рейдерские флоты из кораблей класса M3 и через меню настроек флота прикажите им атаковать только грузовые суда, а затем отправьте патрулировать пространство вражеской фракции. Они будут быстро уничтожать вражеские транспорты, избегая других столкновений. Это может подорвать экономику противника.'  </text>
+		</line>
+		<line linenr="095" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="096" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Урон ракет у Ренегатов значительно увеличен. Они дорогие, но наносят гораздо больше урона, чем в предыдущих версиях модов для X3. Корабли класса M7M - это крайне эффективное средство дальнего поражения против капитальных кораблей, а M8 способны наносить сокрушительный урон истребителям.'</text>
+		</line>
+		<line linenr="097" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="098" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Грамотная группировка ваших сил - ключ к выживанию в крупных сражениях. Отправлять атакующие корабли по одному - верный способ их потерять. При вторжении в сектор сначала отправьте одного-двух быстрых истребителей на противоположную сторону целевой системы. Когда вражеские силы отойдут от врат, чтобы перехватить их, введите в бой ваши крупные корабли.'</text>
+		</line>
+		<line linenr="099" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="100" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* В масштабных сражениях капитальных кораблей в системе используйте быстрые и манёвренные истребители, чтобы отвлечь огонь вражеских капитальных кораблей от ваших. Это заставит противника растрачивать боевую мощь вооружение на юркие и сложным цели.'</text>
+		</line>
+		<line linenr="101" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="102" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Обязательно назначьте поставщика в меню настроек флота, чтобы он автоматически пополнял ваши запасы ракет.'</text>
+		</line>
+		<line linenr="103" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="104" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Перемещение капитальных кораблей через врата происходит значительно медленнее, если игрок находится в системе. Если вам нужно быстро провести их через врата - лучше находиться в другом секторе.'</text>
+		</line>
+		<line linenr="105" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="106" indent="&#160;" />
+		<line linenr="107" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>6</var>
+		</line>
+		<line linenr="108" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Логистика. --'</text>
+		</line>
+		<line linenr="109" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* В системах без прыжковых маяков используйте ТОЛЬКО местных агентов для импорта и экспорта с местными станциями. Для межсистемной торговли используйте отдельных агентов, перевозящих ТОЛЬКО ПОЛНЫЕ грузы между форпостами. Это максимизирует количество межсекторных перевозок и является КЛЮЧОМ к эффективности.'</text>
+		</line>
+		<line linenr="110" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="111" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* При правильной настройке в большинстве систем достаточно всего 2 логистических агентов для обслуживания всех фабрик. В больших системах с 15 фабриками может понадобиться максимум 3 агента, большее количество - будет лишним.'</text>
+		</line>
+		<line linenr="112" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="113" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Торговые агенты форпостов используются для покупки материалов у NPC или продажи излишков NPC. Когда ни то, ни другое не требуется, они начинают торговать между NPC для чистой прибыли, что со временем может стать крупным источником дохода. Также помните, что любая успешная сделка с NPC повышает вашу репутацию с ними, что может изменить ход игры.'</text>
+		</line>
+		<line linenr="114" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="115" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы можете позволить себе затраты на обслуживание, изучите быстрый корабль класса TS для использования в роли агента. Чем быстрее ресурсы перемещаются по вашей империи, тем эффективнее и стабильнее будет её функционирование '</text>
+		</line>
+		<line linenr="116" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="117" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы заметили, что агенты вашего форпоста простаивают без дела, назначьте им другую задачу. Оптимизируйте их использование, чтобы сократить расходы.'</text>
+		</line>
+		<line linenr="118" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="119" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Проверяйте вкладку &quot;Логистика&quot; в личной консоли. Она суммирует общее производство и потребление империи, показывая, когда именно вам нужно больше или меньше фабрик. Это особенно важно при расширении империи.'</text>
+		</line>
+		<line linenr="120" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="121" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Стандартный торговый радиус станций в Mayhem 3 составляет 8 прыжков (без учёта прыжковых маяков). Ваши агенты будут действовать в этих пределах. Если увеличить радиус, нагрузка на процессор может резко возрасти, так что следите за этим.'  </text>
+		</line>
+		<line linenr="122" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="123" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Ваши логистические корабли требуют периодического обслуживания. Регулярно проверяйте экран обслуживания в личной консоли и отправляйте их на инспекцию. Иначе затраты на обслуживание будут очень высокими.'</text>
+		</line>
+		<line linenr="124" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="125" indent="&#160;" />
+		<line linenr="126" indent="&#160;" />
+		<line linenr="127" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>7</var>
+		</line>
+		<line linenr="128" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Общие советы. --'</text>
+		</line>
+		<line linenr="129" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Искатель Истинного Света - это усовершенствованный ремонтный корабль! Выберите союзный корабль в качестве цели и выстрелите, или используйте команду "Ремонт" из меню специальных команд, и он автоматически приступит к работе. Корабль оснащён шестью ремонтными лазерами и способен восстанавливать даже крупные корабли прямо на поле боя.'</text>
+		</line>
+		<line linenr="130" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="131" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Араун ремонтирует корабли в 4 раза быстрее, чем стандартные авианосцы.'</text>
+		</line>
+		<line linenr="132" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="133" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Не стоит недооценивать добывающие корабли. Помимо руды и кремния, они также собирают цветные кристаллы, которые полезны для улучшения кораблей и являются ценным ресурсом для продажи на торговых станциях.'</text>
+		</line>
+		<line linenr="134" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="135" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Во время войны подумайте о размещении нескольких дозорных кораблей в 2-3 прыжках от основных узлов.  Это может стать важной системой раннего предупреждения, если вы слишком заняты своими делами.'</text>
+		</line>
+		<line linenr="136" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="137" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вероятность того, что ИИ объявит вам войну, возрастает, если у вас есть дурная слава, плохая репутация у этой расы, вы контролируете сектор де-юре или у вас низкое &quot;Соотношение общей боевой мощи кораблей к количеству систем&quot;.'</text>
+		</line>
+		<line linenr="138" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="139" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* На высоких уровнях сложности, сражаясь вдали от дома, рассмотрите возможность загрузить дешёвую фабрику и прыжковый маяк на один из ваших флагманских кораблей, при условии что у вас есть корабль с достаточным объёмом трюма.'</text>
+		</line>
+		<line linenr="140" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="141" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'    * В крайнем случае вы можете уйти в незанятый сектор и установить, а затем сбросить в нем прыжковый маяк, что позволит вам сбежать. Установка там же и завода помешает другим фракциям просто захватить этот сектор, обеспечив сохранность вашего маяка.'</text>
+		</line>
+		<line linenr="142" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="143" indent="&#160;">
+			<comment>* Add-Ons 1.1: Updated tip - infamy is not reset upon receiving a war declaration.</comment>
+		</line>
+		<line linenr="144" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Как правило, чтобы объявить вам войну, ИИ должен иметь с вами общую границу.'</text>
+		</line>
+		<line linenr="145" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="146" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* В зависимости от вашего прогресса в создании чертежа корабля, его переработка даст от 10% до 40% его чертежа, но не более 85% (50% для продвинутых кораблей). Оставшиеся 15% (или 50% для продвинутых) необходимо завершить исследованиями или с помощью сканера данных.'</text>
+		</line>
+		<line linenr="147" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="148" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* У разных рас разные преимущества и комплектации кораблей. Например, у Сплитов самые быстрые корабли, у Телади самые вместительные грузовые трюмы, у Боронов ионное оружие, а у Землян самое мощное оружие. У каждой расы есть и свои недостатки.'</text>
+		</line>
+		<line linenr="149" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="150" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли ренегатов быстрее передвигаются, когда начинают бежать к станции.'</text>
+		</line>
+		<line linenr="151" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="152" indent="&#160;" />
+		<line linenr="153" indent="&#160;" />
+		<line linenr="154" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>8</var>
+		</line>
+		<line linenr="155" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по экрану настроек флота. --'</text>
+		</line>
+		<line linenr="156" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Члены флота могут разбредаться во время боевых операций.  Вы можете периодически перегруппировывать их, отдавая команду &quot;Сопровождение: присоединиться к командиру&quot;.'</text>
+		</line>
+		<line linenr="157" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="158" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Если вы хотите, чтобы флоты сосредотачивали огонь по одной цели, установите их &quot;Дальность сканирования&quot; на 0 км и включите опцию &quot;Подчинённые атакуют цель командира&quot;. Это может быть менее эффективно, но вы потеряете меньше кораблей.'</text>
+		</line>
+		<line linenr="159" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="160" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вы можете назначить авто поставщика ракет для пополнения запаса ракет на всех ваших кораблях в бою.  Оснастите TS-трактор транспортером и отправьте его в космос.  На экране &quot;Настройки флота&quot; выберите &quot;Поставщик:&quot; и выберите этот транспорт.'</text>
+		</line>
+		<line linenr="161" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="162" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Поставщики будут либо забирать ракеты с домашней базы, либо производить новые по мере необходимости, автоматически пополняя запасы ваших кораблей. Установите количество для пополнения внизу меню &quot;Расширенные/Оружие...&quot; для каждого корабля.'</text>
+		</line>
+		<line linenr="163" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="164" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* На этом экране показан самый медленный корабль во флоте. Это важно, потому что флот перемещается со скоростью самого медленного своего члена.'</text>
+		</line>
+		<line linenr="165" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="166" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Для быстрых рейдерских флотов из истребителей полезно активировать опцию &quot;Игнорировать крупные и огромные корабли&quot;.'</text>
+		</line>
+		<line linenr="167" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="168" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Флоты могут автоматически пополнять свои ряды, используя меню &quot;Строить сопровождающих&quot;.  Это ограничено только одним типом корабля, но может быть полезно для однородных флотов.'</text>
+		</line>
+		<line linenr="169" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="170" indent="&#160;" />
+		<line linenr="171" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>9</var>
+		</line>
+		<line linenr="172" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по взлому. --'</text>
+		</line>
+		<line linenr="173" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование порта требует времени и денег. Более высокая скорость исследований позволит сократить время исследований порта'</text>
+		</line>
+		<line linenr="174" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="175" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Взломы систем вентиляции и бухгалтерского учета занимают больше всего времени.'</text>
+		</line>
+		<line linenr="176" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="177" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Для преобразования исследовательской станции в хакерскую требуется перк &quot;Хакерская станция&quot;.'</text>
+		</line>
+		<line linenr="178" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="179" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Хорошие позиции для хакерских станций - те, откуда охватывается как можно больше соседних секторов. Размещайте их как можно ближе к предполагаемым целям.'</text>
+		</line>
+		<line linenr="180" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="181" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Между эффективностью и безопасностью есть своеобразный баланс. При более высокой эффективности увеличивается дальность действия вируса, но снижается безопасность. Снижение безопасности увеличивает шансы на отражение атаки (жертвы могут попытаться взломать ваши корабли в ответ).'</text>
+		</line>
+		<line linenr="182" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="183" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Программа "Улучшенный Фаервол" защищает ваши корабли от ответных взломов. Корабли классов M6, TM, M8, а также все капитальные корабли могут быть взломаны в ответ.'</text>
+		</line>
+		<line linenr="184" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="185" indent="&#160;" />
+		<line linenr="186" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>10</var>
+		</line>
+		<line linenr="187" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по абордажу. --'</text>
+		</line>
+		<line linenr="188" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Ожидайте потерь. Вы можете потерять дополнительных бойцов после того, как получите контроль над захваченным кораблём. Чем меньше морпехов остаётся по завершении операции, тем меньше будет дополнительных потерь.'</text>
+		</line>
+		<line linenr="189" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="190" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Для более серьёзных целей обязательно усиливайте своих морпехов - отправляя дополнительные подкрепления.'</text>
+		</line>
+		<line linenr="191" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="192" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Как правило, новым морпехам требуется время, по меньшей мере, на преодоление "1 уровня корабля", чтобы усилить ваших выживших морпехов. Чем дальше от цели вы запускаете десантные капсулы, тем больше времени им требуется.'</text>
+		</line>
+		<line linenr="193" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="194" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Захват корабля может принести вам много ресурсов, но это обычно не приветствуется и сопряжено со собственными рисками.'</text>
+		</line>
+		<line linenr="195" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="196" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Захват брошенных кораблей - хороший способ тренировать своих морпехов и приводит к значительно меньшим потерям, чем захват кораблей с экипажем.'</text>
+		</line>
+		<line linenr="197" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="198" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Взлом щитов и ЭМИ могут использоваться как альтернативные методы, чтобы удерживать щиты цели отключёнными.'</text>
+		</line>
+		<line linenr="199" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="200" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Захват корабля даёт до первых 25% чертежа корабля и некоторых ценных предметов.'</text>
+		</line>
+		<line linenr="201" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="202" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли бродяг ренегатов наиболее ценны, если их захватить, а не уничтожить.'</text>
+		</line>
+		<line linenr="203" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="204" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'*  Захваченные корабли сохраняют все существующие улучшения двигателей и рулевого управления.'</text>
+		</line>
+		<line linenr="205" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="206" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли Ксенонов крайне трудно захватить. Те, что удается сохранить целыми, могут приносить выгоды, которые никогда не получить простым уничтожением.'</text>
+		</line>
+		<line linenr="207" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="208" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'    * Некоторые командиры считают, что захват ксенонских капитальных кораблей улучшает репутацию в галактике, но немногие доживают, но немногие доживают, чтобы подтвердить это.'</text>
+		</line>
+		<line linenr="209" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="210" indent="&#160;" />
+		<line linenr="211" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>11</var>
+		</line>
+		<line linenr="212" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по сюжету и OSV. --'</text>
+		</line>
+		<line linenr="213" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* По мере прохождения основной сюжетной линии вы можете выбрать, продолжать помогать Фэнон или пройти сюжетную линию "Рассвет синтов" и присоединиться к OCV. У каждого пути есть свои преимущества.'</text>
+		</line>
+		<line linenr="214" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="215" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Основная сюжетная линия обычно начинается после того, как вы создадите свою империю, однако альтернативный путь можно запустить сразу после установки первого форпоста.'</text>
+		</line>
+		<line linenr="216" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="217" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Когда прибудут Фэнон, им понадобится ваша помощь. Ускорьте их развитие, продавая им материалы для строительства кораблей.'</text>
+		</line>
+		<line linenr="218" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="219" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Терраформирование планеты в одном из ваших секторов приведёт к штрафу не только для местного форпоста, но и для других ваших форпостлв.'</text>
+		</line>
+		<line linenr="220" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="221" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вступив в OCV, вы получаете бесплатный доступ к взлому, корабельным улучшениям и обслуживанию. Также вы получаете другие бонусы - улучшенных новобранцев-десантников и отсутствие потребления еды по умолчанию. Однако всё это имеет высокую цену...'</text>
+		</line>
+		<line linenr="222" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="223" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Корабли OCV дешевле и сильнее даже земных, однако все ваши корабли OCV со временем перейдут под контроль OCV. Время, необходимое для ассимиляции, определяется аномальной силой сигнала сектора, в котором они были построены (или захвачены), а также качеством корабля.'</text>
+		</line>
+		<line linenr="224" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="225" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Более высокий уровень аномального сигнала и низкое качество корабля сокращают время до перехода кораблей OCV под управление OCV. С другой стороны, корабли OCV строятся быстрее и дешевле в секторах с более сильными аномальными сигналами.'</text>
+		</line>
+		<line linenr="226" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="227" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Чем ниже аномальный сигнал в секторе постройки и выше качество корабля, тем дольше ваш OCV-корабль останется под вашим контролем, прежде чем перейти на сторону OCV.'</text>
+		</line>
+		<line linenr="228" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="229" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей OCV в секторе с 0% аномального сигнала проходит значительно медленнее, чем в секторе с хотя бы 1% аномального сигнала.'</text>
+		</line>
+		<line linenr="230" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="231" indent="&#160;" />
+		<line linenr="232" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$tnumber</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>12</var>
+		</line>
+		<line linenr="233" indent="&#160;">
+			<comment>* Add-Ons 1.4: Added infamy tips.</comment>
+		</line>
+		<line linenr="234" indent="&#160;">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-- Советы по дурной славе. --'</text>
+		</line>
+		<line linenr="235" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Из сострадания ваша дурная слава сбрасывается до 0, когда ИИ выбирает один из ваших секторов целью для скоординированного вторжения.'</text>
+		</line>
+		<line linenr="236" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="237" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Обслуживание кораблей Яки на 25% меньше, пока у вас есть дурная слава'.</text>
+		</line>
+		<line linenr="238" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="239" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Исследование кораблей Яки улучшено, если у вас есть Дурная слава.'</text>
+		</line>
+		<line linenr="240" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="241" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Вероятность того, что ИИ объявит вам войну, возрастает, если у вас есть дурная слава.'</text>
+		</line>
+		<line linenr="242" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="243" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Уничтожение нейтральных торговцев (пока у вас меньше 60 ед. дурной славы), захват кораблей с экипажем и нарушение перемирий - это лишь некоторые из множества способов заработать дурную славу.'</text>
+		</line>
+		<line linenr="244" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="245" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Дурная слава лишает вас возможности получать бесплатные деньги от Корпораций, покупать услуги у фракций или получать полицейские лицензии. Кроме того, при высокой дурной славе нейтральные торговцы ходят с более многочисленным эскортом.'</text>
+		</line>
+		<line linenr="246" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="247" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Высокая дурная слава снижает вероятность атак пиратов на ваши активы и уменьшает шансы того, что наёмники-кочевники покинут вас.'</text>
+		</line>
+		<line linenr="248" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="249" indent="&#160;">
+			<var>$line</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'* Наличие дурной славы даёт небольшой шанс вашим торговцам обнаруживать покупателей Космической Травки. Услуга &quot;Ослабить контроль за наркотиками&quot; раскрывает покупателей Космической Травки, но добавляет вам +10 единиц дурной славы.'</text>
+		</line>
+		<line linenr="250" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="251" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="252" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="253" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="254" indent="" />
+		<line linenr="255" indent="" />
+		<line linenr="256" indent="" interruptable="@">
+			<var>$title</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.ColorText</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<var>$title</var>
+			<text> </text>
+			<text>color</text>
+			<text>=</text>
+			<text>'g'</text>
+		</line>
+		<line linenr="257" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.SendMessage</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>message</text>
+			<text>=</text>
+			<var>$msg</var>
+			<text> </text>
+			<text>log</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>forceDisplay</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>delayMs</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>author</text>
+			<text>=</text>
+			<var>$title</var>
+		</line>
+		<line linenr="258" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="259" indent="" />
+		<line linenr="260" indent="" />
+		<line linenr="261" indent="">
+			<var>AddLine</var>
+			<text>:</text>
+		</line>
+		<line linenr="262" indent="&#160;">
+			<var>$segment</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>8396</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>1</var>
+			<text>,</text>
+			<text> </text>
+			<var>$line</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="263" indent="&#160;" interruptable="@">
+			<var>$segment</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.ColorText</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<var>$segment</var>
+			<text> </text>
+			<text>color</text>
+			<text>=</text>
+			<text>'y'</text>
+		</line>
+		<line linenr="264" indent="&#160;">
+			<var>$msg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$msg</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$segment</var>
+		</line>
+		<line linenr="265" indent="">
+			<text>endsub</text>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="ShowNewsTips" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="98" />
+			<sval type="int" val="0" />
+			<sval type="array" size="6">
+				<sval type="string" val="tipnumber" />
+				<sval type="string" val="tnumber" />
+				<sval type="string" val="msg" />
+				<sval type="string" val="title" />
+				<sval type="string" val="line" />
+				<sval type="string" val="segment" />
+			</sval>
+			<sval type="array" size="241">
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607869" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по обслуживанию. Экономия кредитов! --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Избегайте установки лишних прыжковых маяков. На высоких уровнях сложности их обслуживание обходится очень дорого." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Перк &quot;Сухой док&quot; снижает расходы на содержание пристыкованных капиталдьных кораблей на 75%, а малых кораблей - на 25%." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Качество корабля напрямую влияет на стоимость обслуживания. Для кораблей самого низкого качества она может вырасти почти вдвое!" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Содержание улучшенных кораблей на 35% дороже" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли, которые вы строите не своей расы, требуют больше затрат на обслуживание." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Для кораблей, построенных на форпостах с перком &quot;Передовые технологии&quot;, стоимость обслуживания будет снижена на 50%." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Обслуживание кораблей Яки на 25% меньше, пока у вас есть дурная слава'" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604027" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по автоматическому исследованию. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Постройте собственную станцию по производству улучшенных спутников и припишите к ней быстрые истребители класса M5. После этого вы сможете назначить их авто исследователями. Это также работает и с форпостами." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Автоматические исследователи действуют в радиусе 15 прыжков от своей базы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследователи, базирующиеся на одной станции, всегда исследуют разные секторы без дублирования зон." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Полезно знать: разведчики ИИ на более высоких уровнях сложности могут захватывать сектора." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследователи будут избегать секторов из черного списка. Возможно, вам придётся изучить их лично.'" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* На высоких уровнях сложности другие державы будут периодически &quot;зачищать&quot; часть ваших спутников, поэтому ваши автоматизированные разведчики будут постоянно заняты их заменой." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599675" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Разные советы. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Капитальные (крупные) корабли плохо справляются со стыковкой и проходом через врата, когда вы находитесь с ними в одном секторе. Они часто создают заторы из-за системы избегания столкновений, которая активна только когда вы присутствуете в секторе. Если вы хотите, чтобы они перемещались без пробок, находитесь в другом секторе. Для перемещений внутри сектора при вашем присутствии они работают нормально." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы находитесь в системе вместе со своим флотом, весь урон (с обеих сторон) значительно увеличивается. Так что если вы хотите быстро закончить бой — будьте в секторе сражения. Вне системы весь урон снижен примерно до одной трети." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вне сектора (OOS) Чафы не используются в боях, так как такие бои рассчитываются по упрощённой системе, где не все факторы учитываются. Если вы не участвуете в боях лично, не тратьтесь деньги на них." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Модернизируйте большие корабли в ангаре форпоста, используя цветные кристаллы.  В частности, CCDS1/2/3 позволят использовать Чафф для отражения 3 типов ракет в игре." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Перк &quot;Прыжковая станция&quot; ограничен четырьмя станциями на всю галактику, поэтому размещайте их в стратегически важных точках, где возможны атаки и нельзя полагаться на хрупкие прыжковые маяки. Потеря маяка во время реагирования на нападение может обернуться катастрофой." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Помните, что на высоком и безумном уровнях сложности вы не можете устанавливать маяки в секторах, которые вам не принадлежат. Это значительно усложняет экспансию и зеркалит ограничения ИИ. Единственный способ расширить влияние - использовать TL или капитальный корабль, для перевозки и размещения фабрики или форпоста в нужном месте, и только после этого вы сможете разместить там маяк." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* ИИ иногда отправляет небольшие рейдовые отряды вглубь вашей территории во время войны. Это маленькие флоты быстрых истребителей, которые уничтожают ваших агентов на аванпостах и торговцев, так что защищайте тылы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610594299" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по исследованиям. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Перк &quot;Ускорение исследования&quot; может значительно ускорить любые исследования в этом секторе." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей своей расы даёт значительный бонус." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей типа, соответствующего нациям, граничащим с этим сектором, даёт вам бонус." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Услуга по исследованиям от другой расы может временно ускорить ваши исследования." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы состоите в Коалиции, это может ускорить скорость ваших исследований." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей OCV проходит быстрее в системах с более высоким уровнем сигнала OCV." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей Яки улучшено, если у вас есть Дурная слава." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли землян можно исследовать только в системах, где есть сектора с &quot;Технологиями землян&quot;." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вы можете использовать свой сканер данных для сканирования собственных кораблей, на которые у вас нет чертежа." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610589435" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по сражению флотов. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы не можете догнать кого-то, вы не можете его убить. Скорость убивает. У Сплитов самые быстрые корабли, но их защита довольно слабая. При правильном использовании они могут быть смертоносны. У каждой расы есть свои особые преимущества, которые нужно изучить и использовать." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Прикрывайте свои большие капитальные корабли с помощью нескольких M6. Они обеспечивают отличную защиту от истребителей и могут выстоять в серьёзном бою." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Создавайте быстрые рейдерские флоты из кораблей класса M3 и через меню настроек флота прикажите им атаковать только грузовые суда, а затем отправьте патрулировать пространство вражеской фракции. Они будут быстро уничтожать вражеские транспорты, избегая других столкновений. Это может подорвать экономику противника." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Урон ракет у Ренегатов значительно увеличен. Они дорогие, но наносят гораздо больше урона, чем в предыдущих версиях модов для X3. Корабли класса M7M - это крайне эффективное средство дальнего поражения против капитальных кораблей, а M8 способны наносить сокрушительный урон истребителям." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Грамотная группировка ваших сил - ключ к выживанию в крупных сражениях. Отправлять атакующие корабли по одному - верный способ их потерять. При вторжении в сектор сначала отправьте одного-двух быстрых истребителей на противоположную сторону целевой системы. Когда вражеские силы отойдут от врат, чтобы перехватить их, введите в бой ваши крупные корабли." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* В масштабных сражениях капитальных кораблей в системе используйте быстрые и манёвренные истребители, чтобы отвлечь огонь вражеских капитальных кораблей от ваших. Это заставит противника растрачивать боевую мощь вооружение на юркие и сложным цели." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Обязательно назначьте поставщика в меню настроек флота, чтобы он автоматически пополнял ваши запасы ракет." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Перемещение капитальных кораблей через врата происходит значительно медленнее, если игрок находится в системе. Если вам нужно быстро провести их через врата - лучше находиться в другом секторе." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610584571" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="6" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Логистика. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* В системах без прыжковых маяков используйте ТОЛЬКО местных агентов для импорта и экспорта с местными станциями. Для межсистемной торговли используйте отдельных агентов, перевозящих ТОЛЬКО ПОЛНЫЕ грузы между форпостами. Это максимизирует количество межсекторных перевозок и является КЛЮЧОМ к эффективности." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* При правильной настройке в большинстве систем достаточно всего 2 логистических агентов для обслуживания всех фабрик. В больших системах с 15 фабриками может понадобиться максимум 3 агента, большее количество - будет лишним." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Торговые агенты форпостов используются для покупки материалов у NPC или продажи излишков NPC. Когда ни то, ни другое не требуется, они начинают торговать между NPC для чистой прибыли, что со временем может стать крупным источником дохода. Также помните, что любая успешная сделка с NPC повышает вашу репутацию с ними, что может изменить ход игры." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы можете позволить себе затраты на обслуживание, изучите быстрый корабль класса TS для использования в роли агента. Чем быстрее ресурсы перемещаются по вашей империи, тем эффективнее и стабильнее будет её функционирование " />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы заметили, что агенты вашего форпоста простаивают без дела, назначьте им другую задачу. Оптимизируйте их использование, чтобы сократить расходы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Проверяйте вкладку &quot;Логистика&quot; в личной консоли. Она суммирует общее производство и потребление империи, показывая, когда именно вам нужно больше или меньше фабрик. Это особенно важно при расширении империи." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Стандартный торговый радиус станций в Mayhem 3 составляет 8 прыжков (без учёта прыжковых маяков). Ваши агенты будут действовать в этих пределах. Если увеличить радиус, нагрузка на процессор может резко возрасти, так что следите за этим." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Ваши логистические корабли требуют периодического обслуживания. Регулярно проверяйте экран обслуживания в личной консоли и отправляйте их на инспекцию. Иначе затраты на обслуживание будут очень высокими." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610578171" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="7" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Общие советы. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Искатель Истинного Света - это усовершенствованный ремонтный корабль! Выберите союзный корабль в качестве цели и выстрелите, или используйте команду &quot;Ремонт&quot; из меню специальных команд, и он автоматически приступит к работе. Корабль оснащён шестью ремонтными лазерами и способен восстанавливать даже крупные корабли прямо на поле боя." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Араун ремонтирует корабли в 4 раза быстрее, чем стандартные авианосцы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Не стоит недооценивать добывающие корабли. Помимо руды и кремния, они также собирают цветные кристаллы, которые полезны для улучшения кораблей и являются ценным ресурсом для продажи на торговых станциях." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Во время войны подумайте о размещении нескольких дозорных кораблей в 2-3 прыжках от основных узлов.  Это может стать важной системой раннего предупреждения, если вы слишком заняты своими делами." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вероятность того, что ИИ объявит вам войну, возрастает, если у вас есть дурная слава, плохая репутация у этой расы, вы контролируете сектор де-юре или у вас низкое &quot;Соотношение общей боевой мощи кораблей к количеству систем&quot;." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* На высоких уровнях сложности, сражаясь вдали от дома, рассмотрите возможность загрузить дешёвую фабрику и прыжковый маяк на один из ваших флагманских кораблей, при условии что у вас есть корабль с достаточным объёмом трюма." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="    * В крайнем случае вы можете уйти в незанятый сектор и установить, а затем сбросить в нем прыжковый маяк, что позволит вам сбежать. Установка там же и завода помешает другим фракциям просто захватить этот сектор, обеспечив сохранность вашего маяка." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Как правило, чтобы объявить вам войну, ИИ должен иметь с вами общую границу." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* В зависимости от вашего прогресса в создании чертежа корабля, его переработка даст от 10% до 40% его чертежа, но не более 85% (50% для продвинутых кораблей). Оставшиеся 15% (или 50% для продвинутых) необходимо завершить исследованиями или с помощью сканера данных." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* У разных рас разные преимущества и комплектации кораблей. Например, у Сплитов самые быстрые корабли, у Телади самые вместительные грузовые трюмы, у Боронов ионное оружие, а у Землян самое мощное оружие. У каждой расы есть и свои недостатки." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли ренегатов быстрее передвигаются, когда начинают бежать к станции." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610573819" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по экрану настроек флота. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Члены флота могут разбредаться во время боевых операций.  Вы можете периодически перегруппировывать их, отдавая команду &quot;Сопровождение: присоединиться к командиру&quot;." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Если вы хотите, чтобы флоты сосредотачивали огонь по одной цели, установите их &quot;Дальность сканирования&quot; на 0 км и включите опцию &quot;Подчинённые атакуют цель командира&quot;. Это может быть менее эффективно, но вы потеряете меньше кораблей." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вы можете назначить авто поставщика ракет для пополнения запаса ракет на всех ваших кораблях в бою.  Оснастите TS-трактор транспортером и отправьте его в космос.  На экране &quot;Настройки флота&quot; выберите &quot;Поставщик:&quot; и выберите этот транспорт." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Поставщики будут либо забирать ракеты с домашней базы, либо производить новые по мере необходимости, автоматически пополняя запасы ваших кораблей. Установите количество для пополнения внизу меню &quot;Расширенные/Оружие...&quot; для каждого корабля." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* На этом экране показан самый медленный корабль во флоте. Это важно, потому что флот перемещается со скоростью самого медленного своего члена." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Для быстрых рейдерских флотов из истребителей полезно активировать опцию &quot;Игнорировать крупные и огромные корабли&quot;." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Флоты могут автоматически пополнять свои ряды, используя меню &quot;Строить сопровождающих&quot;.  Это ограничено только одним типом корабля, но может быть полезно для однородных флотов." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610569979" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по взлому. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование порта требует времени и денег. Более высокая скорость исследований позволит сократить время исследований порта" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Взломы систем вентиляции и бухгалтерского учета занимают больше всего времени." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Для преобразования исследовательской станции в хакерскую требуется перк &quot;Хакерская станция&quot;." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Хорошие позиции для хакерских станций - те, откуда охватывается как можно больше соседних секторов. Размещайте их как можно ближе к предполагаемым целям." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Между эффективностью и безопасностью есть своеобразный баланс. При более высокой эффективности увеличивается дальность действия вируса, но снижается безопасность. Снижение безопасности увеличивает шансы на отражение атаки (жертвы могут попытаться взломать ваши корабли в ответ)." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Программа &quot;Улучшенный Фаервол&quot; защищает ваши корабли от ответных взломов. Корабли классов M6, TM, M8, а также все капитальные корабли могут быть взломаны в ответ." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610563579" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по абордажу. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Ожидайте потерь. Вы можете потерять дополнительных бойцов после того, как получите контроль над захваченным кораблём. Чем меньше морпехов остаётся по завершении операции, тем меньше будет дополнительных потерь." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Для более серьёзных целей обязательно усиливайте своих морпехов - отправляя дополнительные подкрепления." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Как правило, новым морпехам требуется время, по меньшей мере, на преодоление &quot;1 уровня корабля&quot;, чтобы усилить ваших выживших морпехов. Чем дальше от цели вы запускаете десантные капсулы, тем больше времени им требуется." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Захват корабля может принести вам много ресурсов, но это обычно не приветствуется и сопряжено со собственными рисками." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Захват брошенных кораблей - хороший способ тренировать своих морпехов и приводит к значительно меньшим потерям, чем захват кораблей с экипажем." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Взлом щитов и ЭМИ могут использоваться как альтернативные методы, чтобы удерживать щиты цели отключёнными." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Захват корабля даёт до первых 25% чертежа корабля и некоторых ценных предметов." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли бродяг ренегатов наиболее ценны, если их захватить, а не уничтожить." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="*  Захваченные корабли сохраняют все существующие улучшения двигателей и рулевого управления." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли Ксенонов крайне трудно захватить. Те, что удается сохранить целыми, могут приносить выгоды, которые никогда не получить простым уничтожением." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="    * Некоторые командиры считают, что захват ксенонских капитальных кораблей улучшает репутацию в галактике, но немногие доживают, но немногие доживают, чтобы подтвердить это." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610558203" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="11" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по сюжету и OSV. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* По мере прохождения основной сюжетной линии вы можете выбрать, продолжать помогать Фэнон или пройти сюжетную линию &quot;Рассвет синтов&quot; и присоединиться к OCV. У каждого пути есть свои преимущества." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Основная сюжетная линия обычно начинается после того, как вы создадите свою империю, однако альтернативный путь можно запустить сразу после установки первого форпоста." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Когда прибудут Фэнон, им понадобится ваша помощь. Ускорьте их развитие, продавая им материалы для строительства кораблей." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Терраформирование планеты в одном из ваших секторов приведёт к штрафу не только для местного форпоста, но и для других ваших форпостлв." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вступив в OCV, вы получаете бесплатный доступ к взлому, корабельным улучшениям и обслуживанию. Также вы получаете другие бонусы - улучшенных новобранцев-десантников и отсутствие потребления еды по умолчанию. Однако всё это имеет высокую цену..." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Корабли OCV дешевле и сильнее даже земных, однако все ваши корабли OCV со временем перейдут под контроль OCV. Время, необходимое для ассимиляции, определяется аномальной силой сигнала сектора, в котором они были построены (или захвачены), а также качеством корабля." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Более высокий уровень аномального сигнала и низкое качество корабля сокращают время до перехода кораблей OCV под управление OCV. С другой стороны, корабли OCV строятся быстрее и дешевле в секторах с более сильными аномальными сигналами." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Чем ниже аномальный сигнал в секторе постройки и выше качество корабля, тем дольше ваш OCV-корабль останется под вашим контролем, прежде чем перейти на сторону OCV." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей OCV в секторе с 0% аномального сигнала проходит значительно медленнее, чем в секторе с хотя бы 1% аномального сигнала." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610553339" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="12" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-- Советы по дурной славе. --" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Из сострадания ваша дурная слава сбрасывается до 0, когда ИИ выбирает один из ваших секторов целью для скоординированного вторжения." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Обслуживание кораблей Яки на 25% меньше, пока у вас есть дурная слава'" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Исследование кораблей Яки улучшено, если у вас есть Дурная слава." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Вероятность того, что ИИ объявит вам войну, возрастает, если у вас есть дурная слава." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Уничтожение нейтральных торговцев (пока у вас меньше 60 ед. дурной славы), захват кораблей с экипажем и нарушение перемирий - это лишь некоторые из множества способов заработать дурную славу." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Дурная слава лишает вас возможности получать бесплатные деньги от Корпораций, покупать услуги у фракций или получать полицейские лицензии. Кроме того, при высокой дурной славе нейтральные торговцы ходят с более многочисленным эскортом." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Высокая дурная слава снижает вероятность атак пиратов на ваши активы и уменьшает шансы того, что наёмники-кочевники покинут вас." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="* Наличие дурной славы даёт небольшой шанс вашим торговцам обнаруживать покупателей Космической Травки. Услуга &quot;Ослабить контроль за наркотиками&quot; раскрывает покупателей Космической Травки, но добавляет вам +10 единиц дурной славы." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="236" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="233" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.ColorText" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="5" />
+					<sval type="string" val="g" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.SendMessage" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="AddLine" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8396" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.ColorText" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="5" />
+					<sval type="string" val="y" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="36">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Normally this is pulled from one of the t-files, but I don't care about translation, so hard-coding it here.  " />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="deal with it." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Possible Topics:" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="---------------------" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Pirates" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Terraforming" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Infamy" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Phanon" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="OCV" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Cyber Center" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="2" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="50" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="69" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.2: new tip" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="71" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="90" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="109" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="109" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="126" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.1: Updated tip - infamy is not reset upon receiving a war declaration." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="134" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="134" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="151" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="166" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="191" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="212" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="214" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.4: Added infamy tips." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="232" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="233" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="233" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="233" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="236" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="236" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>
