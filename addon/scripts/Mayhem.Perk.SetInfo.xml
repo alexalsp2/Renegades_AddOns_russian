@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.Perk.SetInfo</name>
-	<version>33</version>
+	<version>34</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -323,7 +323,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Доход от налогов не менее 100%, темп роста населения снизится.'</text>
+			<text>"Эффективность налогообложения составит не менее 33%, но при сниженном темпе роста населения."</text>
 		</line>
 		<line linenr="030" indent="&#160;">
 			<text>table</text>
@@ -434,7 +434,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'85% reduced chance of getting unfortunate events.'</text>
+			<text>'Вероятность возникновения неблагоприятных событий снижена на 85%.'</text>
 		</line>
 		<line linenr="037" indent="&#160;">
 			<text>else</text>
@@ -770,7 +770,7 @@
 			<sval type="string" val="Mayhem.Perk.SetInfo" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="33" />
+			<sval type="int" val="34" />
 			<sval type="int" val="0" />
 			<sval type="array" size="4">
 				<sval type="string" val="table" />
@@ -949,7 +949,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Налог" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Доход от налогов не менее 100%, темп роста населения снизится." />
+					<sval type="string" val="Эффективность налогообложения составит не менее 33%, но при сниженном темпе роста населения." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -1018,7 +1018,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Страховка" />
 					<sval type="int" val="5" />
-					<sval type="string" val="85% reduced chance of getting unfortunate events." />
+					<sval type="string" val="Вероятность возникновения неблагоприятных событий снижена на 85%." />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />

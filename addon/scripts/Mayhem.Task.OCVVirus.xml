@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.Task.OCVVirus</name>
-	<version>17</version>
+	<version>19</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -1148,6 +1148,14 @@
 			<text>shipOrType</text>
 			<text>=</text>
 			<var>$ship</var>
+			<text> </text>
+			<text>calcSupply</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text> </text>
+			<text>calcTotalPower</text>
+			<text>=</text>
+			<var>[FALSE]</var>
 		</line>
 		<line linenr="134" indent="&#160;&#160;">
 			<var>$value.ocvShips</var>
@@ -2346,7 +2354,7 @@
 			<sval type="string" val="Mayhem.Task.OCVVirus" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="17" />
+			<sval type="int" val="19" />
 			<sval type="int" val="0" />
 			<sval type="array" size="41">
 				<sval type="string" val="playtime" />
@@ -3171,15 +3179,19 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="30" />
 				</sval>
-				<sval type="array" size="8">
+				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.GetShipValue.Point" />
 					<sval type="int" val="31" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
-					<sval type="int" val="1" />
+					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="20" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
