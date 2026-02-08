@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.Perk.SetInfo</name>
-	<version>34</version>
+	<version>35</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -323,7 +323,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>"Эффективность налогообложения составит не менее 33%, но при сниженном темпе роста населения."</text>
+			<text>'Эффективность налогообложения составит не менее 33%, но при этом темпы роста населения снизятся.'</text>
 		</line>
 		<line linenr="030" indent="&#160;">
 			<text>table</text>
@@ -770,7 +770,7 @@
 			<sval type="string" val="Mayhem.Perk.SetInfo" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="34" />
+			<sval type="int" val="35" />
 			<sval type="int" val="0" />
 			<sval type="array" size="4">
 				<sval type="string" val="table" />
@@ -949,7 +949,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Налог" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Эффективность налогообложения составит не менее 33%, но при сниженном темпе роста населения." />
+					<sval type="string" val="Эффективность налогообложения составит не менее 33%, но при этом темпы роста населения снизятся." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
