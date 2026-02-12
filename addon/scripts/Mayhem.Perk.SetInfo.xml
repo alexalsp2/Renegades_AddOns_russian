@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.Perk.SetInfo</name>
-	<version>35</version>
+	<version>36</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -514,7 +514,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'+20% station specialization.'</text>
+			<text>'+20% специализация станций.'</text>
 		</line>
 		<line linenr="045" indent="">
 			<text>table</text>
@@ -625,7 +625,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Автоматическое&amp; сканирование портов и установка бэкдоров (5 прыжков). Создает хакерские чипы.'</text>
+			<text>'Автоматическое сканирование портов и установка бэкдоров (5 прыжков). Создает хакерские чипы.'</text>
 		</line>
 		<line linenr="054" indent="">
 			<comment>* table set $table ( 'Fighter militia' ) = 'Outpost citizens provide free fighter defense force in this system.'</comment>
@@ -645,12 +645,13 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Форпост, как прыжковый маяк, без затрат на обслуживание и не может быть заражен ксенонами.'</text>
+			<text>'Форпост действует как прыжковый маяк (точка прыжка), обладая иммунитетом к заражению Ксенонами и не требуя обслуживания.'</text>
 		</line>
-		<line linenr="056" indent="">
+		<line linenr="056" indent="" />
+		<line linenr="057" indent="">
 			<comment>* Mordan2</comment>
 		</line>
-		<line linenr="057" indent="">
+		<line linenr="058" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -667,14 +668,14 @@
 			<text> </text>
 			<text>'+2 к лимиту станций. Действует отдельно от бонусов терраформирования.'</text>
 		</line>
-		<line linenr="058" indent="" />
-		<line linenr="059" indent="">
+		<line linenr="059" indent="" />
+		<line linenr="060" indent="">
 			<comment>* Add-Ons 1.1: terraforming specialist perk (terraforming rework phase 2)</comment>
 		</line>
-		<line linenr="060" indent="">
+		<line linenr="061" indent="">
 			<comment>* Add-Ons 1.2: terraforming efficiency milestone perks (terraforming rework phase 3)</comment>
 		</line>
-		<line linenr="061" indent="">
+		<line linenr="062" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -691,7 +692,7 @@
 			<text> </text>
 			<text>'Если в этом секторе есть 3 или более планет: 2x рабочей силы и позволяет терраформировать ещё 2 планеты одновременно.'</text>
 		</line>
-		<line linenr="062" indent="">
+		<line linenr="063" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -708,7 +709,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 7 планет. Глобальный штраф терраформирования, применяемый к этому сектору, снижается на 20%.'</text>
 		</line>
-		<line linenr="063" indent="">
+		<line linenr="064" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -725,7 +726,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 12 планет. Позволяет терраформировать 1 дополнительную планету одновременно.'</text>
 		</line>
-		<line linenr="064" indent="">
+		<line linenr="065" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -742,7 +743,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 18 планет, наличие Верфи Круепных кораблей и всех остальных перков терраформирования Форпоста. Даёт +10% к базовому максимуму специализации.'</text>
 		</line>
-		<line linenr="065" indent="">
+		<line linenr="066" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -758,8 +759,8 @@
 			<text>=</text>
 			<var>$table</var>
 		</line>
-		<line linenr="066" indent="" />
-		<line linenr="067" indent="">
+		<line linenr="067" indent="" />
+		<line linenr="068" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$table</var>
@@ -770,7 +771,7 @@
 			<sval type="string" val="Mayhem.Perk.SetInfo" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="35" />
+			<sval type="int" val="36" />
 			<sval type="int" val="0" />
 			<sval type="array" size="4">
 				<sval type="string" val="table" />
@@ -1058,7 +1059,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Недорогие станции" />
 					<sval type="int" val="5" />
-					<sval type="string" val="+20% station specialization." />
+					<sval type="string" val="+20% специализация станций." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -1112,7 +1113,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Центр кибер-безопасности" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Автоматическое&amp; сканирование портов и установка бэкдоров (5 прыжков). Создает хакерские чипы." />
+					<sval type="string" val="Автоматическое сканирование портов и установка бэкдоров (5 прыжков). Создает хакерские чипы." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -1121,7 +1122,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Прыжковая станция" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Форпост, как прыжковый маяк, без затрат на обслуживание и не может быть заражен ксенонами.'." />
+					<sval type="string" val="Форпост действует как прыжковый маяк (точка прыжка), обладая иммунитетом к заражению Ксенонами и не требуя обслуживания." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -1182,7 +1183,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="23">
+			<sval type="array" size="24">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -1264,6 +1265,10 @@
 					<sval type="int" val="38" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Fighter militia' ) = 'Outpost citizens provide free fighter defense force in this system.'" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="39" />
+					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="39" />
