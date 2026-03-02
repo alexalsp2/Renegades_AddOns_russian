@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.Perk.SetInfo</name>
-	<version>36</version>
+	<version>55</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments />
@@ -252,12 +252,32 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Требуется завершить терраформирование 3 планет. В 2 раза больше рабочей силы терраформирования.'</text>
+			<text>'Требуется 3 завершенных терраформированных планеты. 2x рабочая сила терраформирования.'</text>
 		</line>
-		<line linenr="025" indent="">
-			<text>else</text>
+		<line linenr="025" indent="&#160;">
+			<comment>* Add-Ons 1.9.5: New Industrial overdrive perk.</comment>
 		</line>
 		<line linenr="026" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Ускоренное производство'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'+50% к скорости строительства. Нет роста населения или иммиграции.'</text>
+		</line>
+		<line linenr="027" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="028" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -274,7 +294,7 @@
 			<text> </text>
 			<text>'Все корабли построенные здесь: -50% стоимость содержание, но в 2 раз дольше время строительства.'</text>
 		</line>
-		<line linenr="027" indent="&#160;">
+		<line linenr="029" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -289,9 +309,9 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Пираты не нападают или Яки ни на что не претендуют. Новые морпехи получают +20 к навыку боя, если рядом находится пиратская база или сектор Яки.'</text>
+			<text>'Нет пиратских атак или претензий Яки. Новые морпехи получают +20 к боевым навыкам, если Пиратская база или Форпост Яки находятся в пределах 1 прыжка.'</text>
 		</line>
-		<line linenr="028" indent="&#160;">
+		<line linenr="030" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -306,9 +326,9 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Несовместим с перком "Трехкратный рост населения".'</text>
+			<text>'Несовместимо с перками "Стабильность населения" и "Ускоренное производство".'</text>
 		</line>
-		<line linenr="029" indent="&#160;">
+		<line linenr="031" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -323,9 +343,9 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Эффективность налогообложения составит не менее 33%, но при этом темпы роста населения снизятся.'</text>
+			<text>'Доход от налогов не менее 100%, темп роста населения снизится.'</text>
 		</line>
-		<line linenr="030" indent="&#160;">
+		<line linenr="032" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -342,7 +362,7 @@
 			<text> </text>
 			<text>'Бесплатная доставка в "Логистика -&gt; Склад -&gt; ОХТ".'</text>
 		</line>
-		<line linenr="031" indent="&#160;">
+		<line linenr="033" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -359,7 +379,7 @@
 			<text> </text>
 			<text>'Пристыкованные корабли: -75% расходов на содержание / другие корабли: -25% расходов на содержание.'</text>
 		</line>
-		<line linenr="032" indent="&#160;">
+		<line linenr="034" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -376,7 +396,7 @@
 			<text> </text>
 			<text>'Форпост постепенно улучшает отношения со всеми ближайшими соседями.'</text>
 		</line>
-		<line linenr="033" indent="&#160;">
+		<line linenr="035" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -391,9 +411,9 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Убирает штрафы к росту населения, но удваивает стоимость пищи. Несовместимо с перком Не требуется пища.'</text>
+			<text>'Устраняет штрафы к росту населения, но стоимость еды увеличена в 2 раза. Несовместимо с перком "Не требуется пища" и "Ускорение производства".'</text>
 		</line>
-		<line linenr="034" indent="&#160;">
+		<line linenr="036" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -408,9 +428,29 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Требуется завершить терраформирование 3 планет. В 1.2 раза больше рабочей силы терраформирования.'</text>
+			<text>'Требуется 3 завершенных терраформированных планеты. 1.2x рабочая сила терраформирования.'</text>
 		</line>
-		<line linenr="035" indent="&#160;">
+		<line linenr="037" indent="&#160;">
+			<comment>* Add-Ons 1.9.5: New Industrial overdrive perk.</comment>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Ускоренное производство'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'+50% к скорости строительства. Нет роста населения или иммиграции. Несовместимо с перками "Стабильность населения" и "Не требуется пища".'</text>
+		</line>
+		<line linenr="039" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$difficulty</var>
@@ -419,7 +459,19 @@
 			<text> </text>
 			<var>2</var>
 		</line>
-		<line linenr="036" indent="&#160;&#160;">
+		<line linenr="040" indent="&#160;&#160;">
+			<comment>* Add-Ons 1.9.3: Update insurance policy perk description.</comment>
+		</line>
+		<line linenr="041" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$difficulty</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="042" indent="&#160;&#160;&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -434,12 +486,35 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Вероятность возникновения неблагоприятных событий снижена на 85%.'</text>
+			<text>'-85% несчастных случаев.'</text>
 		</line>
-		<line linenr="037" indent="&#160;">
+		<line linenr="043" indent="&#160;&#160;">
 			<text>else</text>
 		</line>
-		<line linenr="038" indent="&#160;&#160;">
+		<line linenr="044" indent="&#160;&#160;&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Страховка'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'-70% несчастных случаев.'</text>
+		</line>
+		<line linenr="045" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="046" indent="&#160;">
+			<text>else</text>
+		</line>
+		<line linenr="047" indent="&#160;&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -456,16 +531,16 @@
 			<text> </text>
 			<text>'Исключаются несчастные случаи.'</text>
 		</line>
-		<line linenr="039" indent="&#160;">
+		<line linenr="048" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="040" indent="">
+		<line linenr="049" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="041" indent="">
+		<line linenr="050" indent="">
 			<comment>* table set $table ( 'Laser manufacture' ) = 'Allows Outpost to produce lasers.'</comment>
 		</line>
-		<line linenr="042" indent="">
+		<line linenr="051" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -482,7 +557,7 @@
 			<text> </text>
 			<text>'Разблокировка производства ракет.'</text>
 		</line>
-		<line linenr="043" indent="">
+		<line linenr="052" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -499,7 +574,7 @@
 			<text> </text>
 			<text>'Скорость исследований увеличена в 1.5 раза. Также увеличивает эффективность перков "Хакерская станция" и "Центр кибер-безопасности".'</text>
 		</line>
-		<line linenr="044" indent="">
+		<line linenr="053" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -516,7 +591,7 @@
 			<text> </text>
 			<text>'+20% специализация станций.'</text>
 		</line>
-		<line linenr="045" indent="">
+		<line linenr="054" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -533,10 +608,10 @@
 			<text> </text>
 			<text>'Все корабли, построенные здесь, получают +1 к настройке двигателя и +1 к оптимизации рулевого управления.'</text>
 		</line>
-		<line linenr="046" indent="">
+		<line linenr="055" indent="">
 			<comment>* table set $table ( 'Electromagnetic pulse' ) = 'This weapon can reset all shields in the sector.'</comment>
 		</line>
-		<line linenr="047" indent="">
+		<line linenr="056" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -553,7 +628,7 @@
 			<text> </text>
 			<text>'Дополнительный слот перков для каждого форпоста игрока в соседних секторах.'</text>
 		</line>
-		<line linenr="048" indent="">
+		<line linenr="057" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -570,7 +645,7 @@
 			<text> </text>
 			<text>'Генерация батареек зависит от силы солнца в секторе.'</text>
 		</line>
-		<line linenr="049" indent="">
+		<line linenr="058" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -587,7 +662,7 @@
 			<text> </text>
 			<text>'Превращает местную Исследовательскую станцию в Хакерскую станцию.'</text>
 		</line>
-		<line linenr="050" indent="">
+		<line linenr="059" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -604,13 +679,13 @@
 			<text> </text>
 			<text>'ЭМИ + респаун кольца лазерных башен и истребителей защиты + 1 Орбитальная Орудийная Платформа (ООП).'</text>
 		</line>
-		<line linenr="051" indent="">
+		<line linenr="060" indent="">
 			<comment>* table set $table ( 'Ring of fire' ) = 'Deploys lasertowers around this Outpost (no respawn). Increases global OWP limit by 1.'</comment>
 		</line>
-		<line linenr="052" indent="">
+		<line linenr="061" indent="">
 			<comment>* table set $table ( 'Space Weed manufacture' ) = 'Cargo jobs can reveal clients. Traders come to buy at 20 infamy.'</comment>
 		</line>
-		<line linenr="053" indent="">
+		<line linenr="062" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -627,10 +702,10 @@
 			<text> </text>
 			<text>'Автоматическое сканирование портов и установка бэкдоров (5 прыжков). Создает хакерские чипы.'</text>
 		</line>
-		<line linenr="054" indent="">
+		<line linenr="063" indent="">
 			<comment>* table set $table ( 'Fighter militia' ) = 'Outpost citizens provide free fighter defense force in this system.'</comment>
 		</line>
-		<line linenr="055" indent="">
+		<line linenr="064" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -647,11 +722,11 @@
 			<text> </text>
 			<text>'Форпост действует как прыжковый маяк (точка прыжка), обладая иммунитетом к заражению Ксенонами и не требуя обслуживания.'</text>
 		</line>
-		<line linenr="056" indent="" />
-		<line linenr="057" indent="">
+		<line linenr="065" indent="" />
+		<line linenr="066" indent="">
 			<comment>* Mordan2</comment>
 		</line>
-		<line linenr="058" indent="">
+		<line linenr="067" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -668,14 +743,14 @@
 			<text> </text>
 			<text>'+2 к лимиту станций. Действует отдельно от бонусов терраформирования.'</text>
 		</line>
-		<line linenr="059" indent="" />
-		<line linenr="060" indent="">
+		<line linenr="068" indent="" />
+		<line linenr="069" indent="">
 			<comment>* Add-Ons 1.1: terraforming specialist perk (terraforming rework phase 2)</comment>
 		</line>
-		<line linenr="061" indent="">
+		<line linenr="070" indent="">
 			<comment>* Add-Ons 1.2: terraforming efficiency milestone perks (terraforming rework phase 3)</comment>
 		</line>
-		<line linenr="062" indent="">
+		<line linenr="071" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -692,7 +767,7 @@
 			<text> </text>
 			<text>'Если в этом секторе есть 3 или более планет: 2x рабочей силы и позволяет терраформировать ещё 2 планеты одновременно.'</text>
 		</line>
-		<line linenr="063" indent="">
+		<line linenr="072" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -709,7 +784,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 7 планет. Глобальный штраф терраформирования, применяемый к этому сектору, снижается на 20%.'</text>
 		</line>
-		<line linenr="064" indent="">
+		<line linenr="073" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -726,7 +801,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 12 планет. Позволяет терраформировать 1 дополнительную планету одновременно.'</text>
 		</line>
-		<line linenr="065" indent="">
+		<line linenr="074" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -743,7 +818,7 @@
 			<text> </text>
 			<text>'Требуется завершить терраформирование 18 планет, наличие Верфи Круепных кораблей и всех остальных перков терраформирования Форпоста. Даёт +10% к базовому максимуму специализации.'</text>
 		</line>
-		<line linenr="066" indent="">
+		<line linenr="075" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -759,8 +834,8 @@
 			<text>=</text>
 			<var>$table</var>
 		</line>
-		<line linenr="067" indent="" />
-		<line linenr="068" indent="">
+		<line linenr="076" indent="" />
+		<line linenr="077" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$table</var>
@@ -771,7 +846,7 @@
 			<sval type="string" val="Mayhem.Perk.SetInfo" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="36" />
+			<sval type="int" val="55" />
 			<sval type="int" val="0" />
 			<sval type="array" size="4">
 				<sval type="string" val="table" />
@@ -779,7 +854,7 @@
 				<sval type="string" val="OCVplotstage" />
 				<sval type="string" val="OCVtext" />
 			</sval>
-			<sval type="array" size="46">
+			<sval type="array" size="51">
 				<sval type="array" size="2">
 					<sval type="int" val="1706" />
 					<sval type="int" val="0" />
@@ -809,7 +884,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610608637" />
+					<sval type="int" val="-1610608381" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
@@ -912,9 +987,18 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Требуется завершить терраформирование 3 планет. В 2 раза больше рабочей силы терраформирования." />
 				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Ускоренное производство" />
+					<sval type="int" val="5" />
+					<sval type="string" val="+50% к скорости строительства. Нет роста населения или иммиграции." />
+				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="29" />
+					<sval type="int" val="34" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -932,7 +1016,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Договор с пиратами" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Пираты не нападают или Яки ни на что не претендуют. Новые морпехи получают +20 к навыку боя, если рядом находится пиратская база или сектор Яки." />
+					<sval type="string" val="Нет пиратских атак или претензий Яки. Новые морпехи получают +20 к боевым навыкам, если Пиратская база или Форпост Яки находятся в пределах 1 прыжка." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -941,7 +1025,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Не требуется пища" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Несовместим с перком &quot;Трехкратный рост населения&quot;." />
+					<sval type="string" val="Несовместимо с перками &quot;Стабильность населения&quot; и &quot;Ускоренное производство&quot;." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -950,7 +1034,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Налог" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Эффективность налогообложения составит не менее 33%, но при этом темпы роста населения снизятся." />
+					<sval type="string" val="Доход от налогов не менее 100%, темп роста населения снизится." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -986,7 +1070,7 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Стабильность населения" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Убирает штрафы к росту населения, но удваивает стоимость пищи. Несовместимо с перком Не требуется пища." />
+					<sval type="string" val="Устраняет штрафы к росту населения, но стоимость еды увеличена в 2 раза. Несовместимо с &quot;Не требуется пища&quot; и &quot;Ускорение производства&quot;." />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -997,9 +1081,18 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Требуется завершить терраформирование 3 планет. В 1.2 раза больше рабочей силы терраформирования." />
 				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Ускоренное производство" />
+					<sval type="int" val="5" />
+					<sval type="string" val="+50% к скорости строительства. Нет роста населения или иммиграции. Несовместимо с перками &quot;Стабильность населения&quot; и &quot;Не требуется пища&quot;." />
+				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605565" />
+					<sval type="int" val="-1610604285" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
@@ -1012,6 +1105,21 @@
 					<sval type="int" val="4" />
 					<sval type="int" val="-2" />
 				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604797" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
 					<sval type="int" val="131074" />
@@ -1019,11 +1127,24 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Страховка" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Вероятность возникновения неблагоприятных событий снижена на 85%." />
+					<sval type="string" val="-85% несчастных случаев." />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="29" />
+					<sval type="int" val="32" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Страховка" />
+					<sval type="int" val="5" />
+					<sval type="string" val="-70% несчастных случаев." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="34" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -1183,7 +1304,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="24">
+			<sval type="array" size="29">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -1225,72 +1346,95 @@
 					<sval type="int" val="4" />
 					<sval type="int" val="2" />
 				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="16" />
-					<sval type="int" val="5" />
+				<sval type="array" size="3">
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.9.5: New Industrial overdrive perk." />
 				</sval>
 				<sval type="array" size="2">
+					<sval type="int" val="17" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="26" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.9.5: New Industrial overdrive perk." />
+				</sval>
+				<sval type="array" size="3">
 					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Add-Ons 1.9.3: Update insurance policy perk description." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="31" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="29" />
+					<sval type="int" val="32" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="29" />
+					<sval type="int" val="33" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="29" />
+					<sval type="int" val="34" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Laser manufacture' ) = 'Allows Outpost to produce lasers.'" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="33" />
+					<sval type="int" val="38" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Electromagnetic pulse' ) = 'This weapon can reset all shields in the sector.'" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="37" />
+					<sval type="int" val="42" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Ring of fire' ) = 'Deploys lasertowers around this Outpost (no respawn). Increases global OWP limit by 1.'" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="37" />
+					<sval type="int" val="42" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Space Weed manufacture' ) = 'Cargo jobs can reveal clients. Traders come to buy at 20 infamy.'" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="38" />
+					<sval type="int" val="43" />
 					<sval type="int" val="1" />
 					<sval type="string" val="table set $table ( 'Fighter militia' ) = 'Outpost citizens provide free fighter defense force in this system.'" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="39" />
+					<sval type="int" val="44" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="39" />
+					<sval type="int" val="44" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Mordan2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="40" />
+					<sval type="int" val="45" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="40" />
+					<sval type="int" val="45" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Add-Ons 1.1: terraforming specialist perk (terraforming rework phase 2)" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="40" />
+					<sval type="int" val="45" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Add-Ons 1.2: terraforming efficiency milestone perks (terraforming rework phase 3)" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="45" />
+					<sval type="int" val="50" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

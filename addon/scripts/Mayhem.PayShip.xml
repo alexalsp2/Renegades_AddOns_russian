@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>Mayhem.PayShip</name>
-	<version>6</version>
+	<version>11</version>
 	<engineversion>50</engineversion>
 	<description></description>
 	<arguments>
@@ -146,6 +146,14 @@
 			<text>shipOrType</text>
 			<text>=</text>
 			<var>$ship</var>
+			<text> </text>
+			<text>IsRecycle</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text> </text>
+			<text>builderRace</text>
+			<text>=</text>
+			<var>$outpost.owner</var>
 		</line>
 		<line linenr="013" indent="&#160;" />
 		<line linenr="014" indent="&#160;">
@@ -413,7 +421,7 @@
 			<sval type="string" val="Mayhem.PayShip" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
-			<sval type="int" val="6" />
+			<sval type="int" val="11" />
 			<sval type="int" val="0" />
 			<sval type="array" size="13">
 				<sval type="string" val="outpost" />
@@ -506,15 +514,19 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="-2" />
 				</sval>
-				<sval type="array" size="8">
+				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.GetNeededPeopleInShip" />
 					<sval type="int" val="8" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
-					<sval type="int" val="1" />
+					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
