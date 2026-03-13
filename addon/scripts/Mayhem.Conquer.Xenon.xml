@@ -1196,7 +1196,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'(Debug) destroyed a '</text>
+			<text>'(Отладка) уничтожил '</text>
 			<text> </text>
 			<text>+</text>
 			<text> </text>
@@ -1204,7 +1204,7 @@
 			<text> </text>
 			<text>+</text>
 			<text> </text>
-			<text>' trading station in the Xenon '</text>
+			<text>' торговую станцию в Ксенонском секторе '</text>
 			<text> </text>
 			<text>+</text>
 			<text> </text>
@@ -2122,13 +2122,13 @@
 					<sval type="int" val="20" />
 					<sval type="int" val="9" />
 					<sval type="int" val="5" />
-					<sval type="string" val="(Debug) destroyed a " />
+					<sval type="string" val="(Отладка) уничтожил " />
 					<sval type="int" val="131074" />
 					<sval type="int" val="19" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="5" />
-					<sval type="string" val=" trading station in the Xenon " />
+					<sval type="string" val=" торговую станцию в Ксенонском секторе " />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="131074" />
